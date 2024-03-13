@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<html lang="nl">
+<head>
+		<link rel="stylesheet" href="stijl.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Les 3 </title>
+</head>
+<body>
+    <h1>Les 3 van project ICT - EL </h1>
+    <p>In de eerste sessie ict werd er gestart met een inleiding over 2 webstandaarden namelijk HTML en CSS. </p>
+		<p>Daarna maakten we kennis met het programmeren in PHP.</p>
+		<p>Het was dan de bedoeling om zelf wat te leren werken met deze software en een eerste soort van website te maken. </p>
+		<p>Hiervoor was het belangrijk om de juiste informatie van de powerpoint over te nemen. </p>
+		<p>Dit was niet zo moeilijk, het voelde ook soms aan dat het niet volledig nuttig was, waarmee we bezig waren.</p>
+		<img alt="dramco uno (47K)" src="dramco%20uno.jpg" height="330" width="512" />
+		<pre> 
+const int lichtSensorPin = A0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  
+  int lichtWaarde = analogRead(lichtSensorPin);
+
+  
+  float lichtIntensiteit = map(lichtWaarde, 0, 1023, 0, 100);
+
+  
+  Serial.print("Lichtintensiteit: ");
+  Serial.print(lichtIntensiteit);
+  Serial.println("%");
+
+  delay(1000); // Wacht 1 seconde voordat de meting opnieuw wordt uitgevoerd
+}
+</pre>
+<p>In dit voorbeeld:</p>
+
+<p>De analoge waarde van de lichtsensor wordt gelezen en omgezet naar een percentage lichtintensiteit.</p>
+<p>De lichtintensiteit wordt elke seconde weergegeven op de monitor.</p>
+</body>
+</html>
